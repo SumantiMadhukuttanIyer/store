@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Product from './components/Product/Product.js';
+import Recipe from './components/Product/Recipe.js';
 
 function App() {
-  return (<Product />
+  return (<Recipe />
   );
 }
 

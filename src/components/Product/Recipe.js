@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Product.css';
+import './Recipe.css';
 
 const cash = {
     minimumFractionDigits: 2,
@@ -10,7 +10,7 @@ const cash = {
     return total.toLocaleString(undefined, cash)
   }
 
-  const products = [
+  const recipes = [
   {
     emoji: '🍕',
     name: 'Pizza',
@@ -23,13 +23,13 @@ const cash = {
   }
 ];
   
-  export default function Product() {
+  export default function Recipe() {
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
 
-    function add(product) {
-        setCart(current => [...current, product.name]);
-        setTotal(current => current + product.price);
+    function add(recipe) {
+        setCart(current => [...current, recipe.name]);
+        setTotal(current => current + recipe.price);
       }
 
      return(
@@ -39,12 +39,12 @@ const cash = {
           </div>
           <div> Total value of Cart items: {getTotal(total)}</div>
             <div>
-            {products.map(product => (
-              <div key={product.name}>
+            {recipes.map(recipe => (
+              <div key={recipe.name}>
                 <div className="product">
-                  <span role="img" aria-label={product.name}>{product.emoji}</span>
+                  <span role="img" aria-label={recipe.name}>{recipe.emoji}</span>
                 </div>
-                <button onClick={() => add(product)}>Add</button>
+                <button onClick={() => add(recipe)}>Add</button>
                 <button>Remove</button>
               </div>
             ))}
