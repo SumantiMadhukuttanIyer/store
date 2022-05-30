@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Product.css';
 
-const currencyOptions = {
+const cash = {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }
   
   function getTotal(total) {
-    return total.toLocaleString(undefined, currencyOptions)
+    return total.toLocaleString(undefined, cash)
   }
 
   const products = [
@@ -35,9 +35,9 @@ const currencyOptions = {
      return(
         <div className="wrapper">
           <div>
-            Shopping Cart: {cart.length} total items.
+            Sumanti's Menu Cart items: {cart.length} total items.
           </div>
-          <div>Total: {getTotal(total)}</div>
+          <div> Total value of Cart items: {getTotal(total)}</div>
             <div>
             {products.map(product => (
               <div key={product.name}>
