@@ -14,12 +14,12 @@ const currencyOptions = {
   {
     emoji: '🍕',
     name: 'Pizza',
-    price: 5
+    price: 100
   },
   {
     emoji: '🌭',
     name: 'Hot Dog',
-    price: 20,
+    price: 50
   }
 ];
   
